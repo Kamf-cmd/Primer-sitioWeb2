@@ -1,0 +1,369 @@
+<!--
+  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: Gaona Castro Eduardo Baltazar
+  * Grupo: 3B PRO VESP  
+  * Actividad: Portal Institucional (Con barra superior, collage y formulario)
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda KaMusic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTACTO -->
+    <div class="top-bar" id="inicio">
+        <div class="top-bar-container">
+            <div class="top-contacts">
+                <span class="top-item">📞 734 000 0000</span>
+                <span class="top-item whatsapp">💬 Escríbenos por <strong>WhatsApp</strong></span>
+                <span class="top-item2">📍 Plaza Galerias Autopista México-Acapulco, Blvd. del Lago km 87.5, 62370 Cuernavaca, Mor.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#inicio">
+                    <img src="img/logo.png" alt="Logo" class="brand-logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#oferta">Informacion</a>
+                <a href="login.html" class="btn-nav-login">Plataforma de musica</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
+    <section class="hero-section2">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos, Botón y Beneficios -->
+            <div class="hero-text-side">
+                <span class="hero-tag">CUMPLE EL CAPRICHO DE TUS OIDOS</span>
+                <h1>KaMusic, Estamos para bendecir a tus oidos</h1>
+                <p>Somos una tienda sobre todo lo que tenga que ver con musica, en nuestra tienda puedes encontrar desde instrumentos, hasta el cd o vinilo de tu album favorito!
+                    Contamos con muchos articulos, todos de calidad, visitanos y cumplele el capricho a tus oidos
+                </p>
+                
+                <div class="hero-cta-box">
+                    <h1>¡Regristate y conoce tambien nuestra plataforma Musical! </h1>
+                    <a href="login.html" class="btn-orange">Registro</a>
+                    <div class="hero-benefits">
+                        <span>✓ Escucha millones de canciones</span>
+                        <span>✓ Audio de alta fidelidad</span>
+                        <span>✓ Crea playlist para ti o con amigos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Collage de Imágenes -->
+            <div class="hero-image-side">
+                <div class="image-collage">
+                    <div class="collage-main">
+                        <img src="img/img1.jpg" alt="Estudiante CBTis">
+                    </div>
+                    <div class="collage-sub">
+                        <img src="img/img2.jpg" alt="Laboratorista">
+                        <img src="img/img3.jpg" alt="Programación">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE OFERTA EDUCATIVA CON IMÁGENES ALUSIVAS -->
+    <section id="oferta" class="careers-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Conoce lo que vendemos</h2>
+                <p>Encuentra todo lo que necesitas para disfrutar de la música a tu manera. Explora nuestra variedad de instrumentos, equipos de audio y formatos musicales, y descubre productos pensados para cada gusto y experiencia:</p>
+            </div>
+
+            <div class="careers-grid">
+                
+                <!-- Carrera 1: Recursos Humanos -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/inst.jpg" alt="instrumentos">
+                    </div>
+                    <div class="career-content">
+                        <h3>Instrumentos musicales</h3>
+                        <p>Desde guitarras hasta teclados y otros instrumentos para crear tu propia música.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 2: Programación -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/aud.jpg" alt="Programación">
+                    </div>
+                    <div class="career-content">
+                        <h3>Audio y reproducción</h3>
+                        <p>Audífonos, DACs, reproductores de vinilo, bocinas y equipos para disfrutar cada sonido.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 3: Ciberseguridad -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/disc.jpg" alt="Ciberseguridad">
+                    </div>
+                    <div class="career-content">
+                        <h3>Discos y coleccionables</h3>
+                        <p>Descubre CDs, vinilos y ediciones especiales de tus artistas favoritos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOCENTES CON RECORRIDO INTERACTIVO (JS) -->
+    <section class="teachers-section">
+        <div class="teachers-container">
+            
+            <div class="teachers-header">
+                <div>
+                    <span class="teachers-tag">Articulos mas vendidos</span>
+                    <h2>Articulos</h2>
+                    <p>Estos son de los articulos que mas se venden en nuestra tienda</p>
+                </div>
+                <!-- Botones funcionales con IDs -->
+                <div class="teachers-nav-buttons">
+                    <button id="btn-prev" class="nav-btn">‹</button>
+                    <button id="btn-next" class="nav-btn">›</button>
+                </div>
+            </div>
+
+            <!-- Contenedor de las tarjetas de docentes (controlado por JS) -->
+            <div class="teachers-grid" id="teachers-track">
+                
+                <!-- Grupo 1 (Primeros 4 profesores) -->
+                <div class="teacher-card">
+                    <img src="img/gui.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Guitarra eléctrica</h3>
+                        <p>$8,499 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/teclado.jpg" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>Piano digital</h3>
+                        <p>$9,299 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/guitarra.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Guitarra Acustica</h3>
+                        <p>$3,499 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/audi.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Audifonos Sony</h3>
+                        <p>$5,499 MXN</p>
+                    </div>
+                </div>
+
+                <!-- Grupo 2 (Otros 4 profesores / Ejemplos adicionales para el recorrido) -->
+                <div class="teacher-card">
+                    <img src="img/dac.jpg" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>DAC portatil</h3>
+                        <p>$8,499 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/torna.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Tornamesa</h3>
+                        <p>$4,299 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/viniñ.jpg" alt="Profesora">
+                    <div class="teacher-info">
+                        <h3>Vinilo After Hours</h3>
+                        <p>$299 MXN</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/cd.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>CD AM</h3>
+                        <p>$299 MXN</p>
+                    </div>
+                </div>
+
+                 <div class="teacher-card">
+                    <img src="img/vinil.jpg" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Vinilo The College Dropout</h3>
+                        <p>$299 MXN</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON FORMULARIO INTEGRADO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos y Beneficios (Estilo UMOV) -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡Visita nuestra plataforma musical!</span>
+                <h1 class="hero-title-custom">Ka Music</h1>
+                <p class="hero-desc-custom">Conoce nuestra plataforma musical con millones de canciones, crea una cuenta para ingresar</p>
+                
+                <div class="hero-subtitle-custom">
+                    Sobre nuestra plataforma:
+                </div>
+                <div class="hero-benefits hero-benefits-column">
+                    <span>✓ Escucha millones de canciones</span>
+                    <span>✓ Escucha canciones de tus artistas favoritos exclusivas de nuestra plataforma</span>
+                    <span>✓ Audio de alta fidelidad</span>
+                    <span>✓ Crea playlist solo o con amigos o familiares</span>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta Flotante con Formulario (10 campos/etiquetas) -->
+            <div class="hero-form-side">
+                <div class="cbtis-hero-form-card">
+                    
+                    <h3 class="form-card-title">
+                        Crea tu cuenta
+                    </h3>
+
+                    <form id="form-hero-informes" action="#" method="POST">
+                        
+                        <!-- 1. Campo de Texto: Nombre -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_nombre" name="nombre" required placeholder="Nombre" class="form-control-input">
+                        </div>
+
+                        <!-- 3. Campo de Correo Electrónico -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="email" id="info_email" name="email" required placeholder="Correo electrónico" class="form-control-input">
+                        </div>
+
+                        <!-- 4. Campo de Teléfono -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="tel" id="info_telefono" name="telefono" required placeholder="Teléfono o WhatsApp" class="form-control-input">
+                        </div>
+
+                        <!-- 5. Menú Desplegable (Select): Nivel de Estudios -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_nivel" name="nivel" required class="form-control-select">
+                                <option value="">Elige tu genero musical favorito</option>
+                                <option value="HIP">Hip Hop</option>
+                                <option value="RAP">Rap</option>
+                                <option value="POP">Pop</option>
+                                <option value="ELECTRONICA">Electronica</option>
+                                <option value="SALSA">Salsa</option>
+                                <option value="MEXA">Regional mexicano</option>
+                                <option value="CUMBIA">cumbia</option>
+                                <option value="INDIE">Indie</option>
+                                <option value="R&B">R&B</option>
+
+                            </select>
+                        </div>
+
+                        <!-- 7. Campo de Fecha (Date): Fecha estimada de ingreso -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <label for="info_fecha" class="form-date-label">Fecha de nacimiento:</label>
+                            <input type="date" id="info_fecha" name="fecha" required class="form-control-date">
+                        </div>
+
+                        <!-- 8. Área de Texto (Textarea): Dudas adicionales -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <textarea id="info_comentarios" name="comentarios" rows="2" placeholder="Escribe tus dudas" class="form-control-textarea"></textarea>
+                        </div>
+
+                      <!-- 9. Casilla de Verificación (Checkbox): Términos y privacidad -->
+                        <div class="cbtis-input-group form-group-checkbox">
+                            <input type="checkbox" id="info_terminos" name="terminos" required class="form-checkbox-input">
+                            <label for="info_terminos" class="form-checkbox-label">
+                                Acepto recibir correos de novedades y informacion acerca de la plataforma y la tienda.
+                            </label>
+                        </div>
+
+                        <!-- 10. Botón de Envío (Submit Button) -->
+                        <button type="submit" class="cbtis-btn-ingresar form-submit-btn">
+                            Crear cuenta
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONVENIOS DOBLE LÍNEA -->
+    <section class="convenios-section">
+        <div class="convenios-container">
+            
+            <div class="section-header">
+                <span class="teachers-tag convenience-tag-custom">¿QUIERES VISITARNOS?</span>
+                <h2>VISITANOS</h2>
+            </div>
+            <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9264202311206!2d-99.19798132479826!3d18.934650732240957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddf8acd0827b9%3A0x491809bc17feeeac!2sGaler%C3%ADas%20Cuernavaca!5e0!3m2!1ses-419!2smx!4v1794602875343!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Ubicación CBTis 166 Pablo Torres Burgos">
+                    </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER CON REDES SOCIALES) -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <p>KaMusic Industry &copy; 2026</p>
+                <p class="footer-author">Desarrollado por: Melo Flores Kevin Alexandro (5A PRO VESP)</p>
+            </div>
+
+            <!-- Enlaces de Redes Sociales -->
+            <div class="footer-socials">
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">f</a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">ig</a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon" title="WhatsApp">💬</a>
+                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"> ▶</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
